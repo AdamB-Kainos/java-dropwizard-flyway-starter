@@ -8,3 +8,7 @@ REFERENCES client(clientID);
 
 ALTER TABLE Project
 ADD COLUMN TechLead int;
+
+ALTER TABLE Project
+ADD FOREIGN KEY (TechLead)
+REFERENCES deliveryEmployee(employeeID);
