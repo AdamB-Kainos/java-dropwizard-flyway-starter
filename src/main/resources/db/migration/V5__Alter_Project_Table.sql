@@ -1,5 +1,10 @@
 ALTER TABLE Project
-ADD COLUMN clientID int NOT NULL;
+ADD COLUMN clientID int 
+NOT NULL;
 
 ALTER TABLE Project
-ADD COLUMN TechLead int NOT NULL;
+ADD FOREIGN KEY (clientID)
+REFERENCES client(clientID);
+
+ALTER TABLE Project
+ADD COLUMN TechLead int;
