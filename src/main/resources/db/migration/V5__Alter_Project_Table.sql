@@ -1,0 +1,5 @@
+ALTER TABLE Project
+ADD COLUMN clientID int NOT NULL;
+
+ALTER TABLE Project
+ADD COLUMN TechLead int NOT NULL;
