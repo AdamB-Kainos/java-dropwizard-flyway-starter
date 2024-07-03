@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TestDao {
+    @SuppressWarnings("checkstyle:LineLength")
     public List<String> testConnection() throws SQLException {
         List<String> databases = new ArrayList<>();
 
@@ -20,14 +21,15 @@ public class TestDao {
                     "SHOW DATABASES;");
             long end = System.currentTimeMillis();
 
-            System.out.println("Total time to execute query in milliseconds: " + (end - start));
+            System.out.printf(
+                    "Total time to execute query in milliseconds: %d%n",
+                    end - start);
 
             System.out.println("Retrieving database names");
             while (resultSet.next()) {
                 System.out.println(resultSet.getString("Database"));
                 databases.add(resultSet.getString("Database"));
             }
-            System.out.println("Finished Retrieving database names");
             System.out.println("Finished Retrieving database names");
         }
 
