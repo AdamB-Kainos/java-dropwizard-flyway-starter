@@ -21,7 +21,6 @@ public class TestDao {
             while (resultSet.next()) {
                 System.out.println(resultSet.getString("Database"));
                 databases.add(resultSet.getString("Database"));
-
             }
             System.out.println("Finished Retrieving database names");
         }
