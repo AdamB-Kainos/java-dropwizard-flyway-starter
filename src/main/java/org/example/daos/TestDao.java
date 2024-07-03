@@ -23,6 +23,7 @@ public class TestDao {
                 databases.add(resultSet.getString("Database"));
             }
             System.out.println("Finished Retrieving database names");
+
         }
 
         return databases;
