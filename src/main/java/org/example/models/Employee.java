@@ -16,16 +16,12 @@ public class Employee {
     @JsonProperty
     private String nationalInsurance;
 
-    public int getEmployeeID() {
-        return employeeID;
-    }
-
-    public void setEmployeeID(int employeeID) {
-        this.employeeID = employeeID;
-    }
-
-    public Employee(int employeeID, String fName, String lName, double salary,
-                    String bankAccountNum, String nationalInsurance) {
+    public Employee(final int employeeID,
+                    final String fName,
+                    final String lName,
+                    final double salary,
+                    final String bankAccountNum,
+                    final String nationalInsurance) {
         this.employeeID = employeeID;
         this.fName = fName;
         this.lName = lName;
@@ -34,11 +30,19 @@ public class Employee {
         this.nationalInsurance = nationalInsurance;
     }
 
+    public int getEmployeeID() {
+        return employeeID;
+    }
+
+    public void setEmployeeID(final int employeeID) {
+        this.employeeID = employeeID;
+    }
+
     public String getfName() {
         return fName;
     }
 
-    public void setfName(String fName) {
+    public void setfName(final String fName) {
         this.fName = fName;
     }
 
@@ -46,7 +50,7 @@ public class Employee {
         return lName;
     }
 
-    public void setlName(String lName) {
+    public void setlName(final String lName) {
         this.lName = lName;
     }
 
@@ -54,7 +58,7 @@ public class Employee {
         return salary;
     }
 
-    public void setSalary(double salary) {
+    public void setSalary(final double salary) {
         this.salary = salary;
     }
 
@@ -62,7 +66,7 @@ public class Employee {
         return bankAccountNum;
     }
 
-    public void setBankAccountNum(String bankAccountNum) {
+    public void setBankAccountNum(final String bankAccountNum) {
         this.bankAccountNum = bankAccountNum;
     }
 
@@ -70,7 +74,7 @@ public class Employee {
         return nationalInsurance;
     }
 
-    public void setNationalInsurance(String nationalInsurance) {
+    public void setNationalInsurance(final String nationalInsurance) {
         this.nationalInsurance = nationalInsurance;
     }
 }

@@ -6,7 +6,7 @@ public enum Entity {
 
     private final String entity;
 
-    Entity(String entity) {
+    Entity(final String entity) {
         this.entity = entity;
     }
 

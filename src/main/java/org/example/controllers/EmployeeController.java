@@ -19,13 +19,13 @@ public class EmployeeController {
 
     EmployeeService employeeService;
 
-    public EmployeeController(EmployeeService employeeService) {
+    public EmployeeController(final EmployeeService employeeService) {
         this.employeeService = employeeService;
     }
 
     @POST
     @Produces(MediaType.APPLICATION_JSON)
-    public Response createEmployee(EmployeeRequest employeeRequest) {
+    public Response createEmployee(final EmployeeRequest employeeRequest) {
         try {
             return Response
                     .status(Response.Status.CREATED)

@@ -10,11 +10,25 @@ public class EmployeeRequest {
     private String bankAccountNum;
     private String nationalInsurance;
 
+    @JsonCreator
+    public EmployeeRequest(
+            @JsonProperty("fName") final String fName,
+            @JsonProperty("lName") final String lName,
+            @JsonProperty("salary") final double salary,
+            @JsonProperty("bankAccountNum") final String bankAccountNum,
+            @JsonProperty("nationalInsurance") final String nationalInsurance) {
+        this.fName = fName;
+        this.lName = lName;
+        this.salary = salary;
+        this.bankAccountNum = bankAccountNum;
+        this.nationalInsurance = nationalInsurance;
+    }
+
     public String getfName() {
         return fName;
     }
 
-    public void setfName(String fName) {
+    public void setfName(final String fName) {
         this.fName = fName;
     }
 
@@ -22,7 +36,7 @@ public class EmployeeRequest {
         return lName;
     }
 
-    public void setlName(String lName) {
+    public void setlName(final String lName) {
         this.lName = lName;
     }
 
@@ -30,7 +44,7 @@ public class EmployeeRequest {
         return salary;
     }
 
-    public void setSalary(double salary) {
+    public void setSalary(final double salary) {
         this.salary = salary;
     }
 
@@ -38,7 +52,7 @@ public class EmployeeRequest {
         return bankAccountNum;
     }
 
-    public void setBankAccountNum(String bankAccountNum) {
+    public void setBankAccountNum(final String bankAccountNum) {
         this.bankAccountNum = bankAccountNum;
     }
 
@@ -46,21 +60,7 @@ public class EmployeeRequest {
         return nationalInsurance;
     }
 
-    public void setNationalInsurance(String nationalInsurance) {
-        this.nationalInsurance = nationalInsurance;
-    }
-
-    @JsonCreator
-    public EmployeeRequest(
-            @JsonProperty("fName") String fName,
-            @JsonProperty("lName") String lName,
-            @JsonProperty("salary") double salary,
-            @JsonProperty("bankAccountNum") String bankAccountNum,
-            @JsonProperty("nationalInsurance") String nationalInsurance) {
-        this.fName = fName;
-        this.lName = lName;
-        this.salary = salary;
-        this.bankAccountNum = bankAccountNum;
+    public void setNationalInsurance(final String nationalInsurance) {
         this.nationalInsurance = nationalInsurance;
     }
 }

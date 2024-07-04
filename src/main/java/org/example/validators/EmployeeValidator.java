@@ -6,7 +6,7 @@ import org.example.models.EmployeeRequest;
 
 public class EmployeeValidator {
 
-    public void validateEmployee(EmployeeRequest employeeRequest)
+    public void validateEmployee(final EmployeeRequest employeeRequest)
             throws InvalidException {
 
         if (employeeRequest.getSalary() < 1) {

@@ -9,12 +9,13 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class EmployeeDao {
-    public int createEmployee(EmployeeRequest employeeRequest) throws
+    public int createEmployee(final EmployeeRequest employeeRequest) throws
             SQLException {
         Connection c = DatabaseConnector.getConnection();
 
-        String insertStatement =
-                "INSERT INTO employee (fName, lName, salary, bankAccountNumber, nationalInsuranceNumber) VALUES (?,?,?,?,?)";
+        String insertStatement = "INSERT INTO employee (fName, lName, salary, "
+                + "bankAccountNumber, nationalInsuranceNumber) "
+                + "VALUES (?,?,?,?,?)";
 
         PreparedStatement st = c.prepareStatement(insertStatement,
                 Statement.RETURN_GENERATED_KEYS);

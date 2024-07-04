@@ -15,13 +15,13 @@ public class EmployeeService {
 
     EmployeeValidator employeeValidator;
 
-    public EmployeeService(EmployeeDao employeeDao,
-                           EmployeeValidator employeeValidator) {
+    public EmployeeService(final EmployeeDao employeeDao,
+                           final EmployeeValidator employeeValidator) {
         this.employeeDao = employeeDao;
         this.employeeValidator = employeeValidator;
     }
 
-    public int createEmployee(EmployeeRequest employeeRequest)
+    public int createEmployee(final EmployeeRequest employeeRequest)
             throws FailedToCreateException, SQLException, InvalidException {
         employeeValidator.validateEmployee(employeeRequest);
 
