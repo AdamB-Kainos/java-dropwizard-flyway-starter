@@ -17,7 +17,8 @@ public class DeliveryEmployeeService {
 
     public
     DeliveryEmployeeService(final DeliveryEmployeeDao deliveryEmployeeDao,
-                                   final DeliveryEmployeeValidator deliveryEmployeeValidator) {
+                                   final DeliveryEmployeeValidator
+                                           deliveryEmployeeValidator) {
         this.deliveryEmployeeDao = deliveryEmployeeDao;
         this.deliveryEmployeeValidator = deliveryEmployeeValidator;
     }

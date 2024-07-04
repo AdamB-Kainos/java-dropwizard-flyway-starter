@@ -14,6 +14,24 @@ public class DeliveryEmployeeValidator {
             throw new InvalidException(Entity.EMPLOYEE,
                     "Invalid DeliveryEmployeeId, must be greater than 1");
         }
+        if (deliveryEmployeeRequest.getfName() == null) {
+            throw new InvalidException(Entity.EMPLOYEE,
+                    "Invalid DeliveryEmployee FirstName, must not be null");
+        }
+        if (deliveryEmployeeRequest.getlName() == null) {
+            throw new InvalidException(Entity.EMPLOYEE,
+                    "Invalid DeliveryEmployee LastName, must not be null");
+        }
+        if (deliveryEmployeeRequest.getBankAccountNum() == null) {
+            throw new InvalidException(Entity.EMPLOYEE,
+                    "Invalid DeliveryEmployee BankAccountNumber, must not be "
+                            + "null");
+        }
+        if (deliveryEmployeeRequest.getNationalInsurance() == null) {
+            throw new InvalidException(Entity.EMPLOYEE,
+                    "Invalid DeliveryEmployeeId, NationalInsurance Number must"
+                            + " be greater than 1");
+        }
 
     }
 }

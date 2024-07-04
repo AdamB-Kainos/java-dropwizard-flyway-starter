@@ -9,7 +9,6 @@ public final class DatabaseConnector {
 
     private DatabaseConnector() {
     }
-    @SuppressWarnings("checkstyle:LineLength")
     public static Connection getConnection()
             throws SQLException, IllegalArgumentException {
 
